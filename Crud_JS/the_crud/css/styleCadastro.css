@@ -1,0 +1,125 @@
+
+body{margin:0;
+    font-family: Roboto, Arial, sans-serif;
+    background-image: url("../img/AdobeStock_259562543.jpeg");
+    /* inserir a possibilidade de pegar da internet caso n encontre no pc */
+}
+
+.listaHeader{
+    /* ver como mexer no display para sempre aparecer */
+    display: sticky;
+    background: #444;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    /* ver melhor o efeito do overflow hidden */
+    overflow: hidden;
+}
+
+.listaHeader li{
+    float:left;
+}
+
+.listaHeader li:last-child{
+    float:right;
+    margin-right: 4vw;
+}
+
+
+.listaHeader li a{
+    display: block;
+    text-decoration:none;
+    color: rgba(243, 243, 243, 0.829);
+    padding: 14px 16px;
+}
+
+    .listaHeader a:hover:not(.active){
+        background-color: #111;
+    }
+
+.active{
+    background-color: #519dee;
+}
+
+/* -----------------main--------------------- */
+
+
+
+.container{
+    color: rgba(243, 243, 243, 0.829);
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 2vh 0;
+    color: rgb(238, 229, 229);
+
+}
+
+form{
+    margin: 2.3vh 0 ;
+    background-color: #333;
+    padding: 3vh 3vw;
+    border-radius: 1vh;
+    width: 40vw;
+
+}
+
+form .input-block {
+    margin-bottom: 3vh;
+  }
+
+  /* mexer no sexo */
+  form .input-block input{
+    min-width: 10vw;
+   
+  }
+  form .input-block input:not([type=radio]):not(#logradouroCad):not(#numLogCad):not(#compLogCad)
+  {
+    display: block;
+   
+  }
+
+  form .input-block label {
+    font-size: 14px;
+    color:rgb(238, 229, 229)
+    
+  }
+
+
+  /* ver como incluir o select */
+form .input-block input{
+    margin-bottom: -1vh;
+    font-size: 16px;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #519dee;
+    outline-color: #519dee;
+}
+form .input-block select{
+    /* entender pq o margin bottom n funciona no select */
+    margin-bottom: -10vh;
+    font-size: 16px;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #519dee;
+    outline-color: #519dee;
+}
+
+/* ver uma solução mais digna */
+form .input-block [type=radio]{
+    margin-right: -60px ;
+    margin-left: -30px;
+}
+
+
+form .input-block #numLogCad{
+    width: 1vw;
+}
+
+

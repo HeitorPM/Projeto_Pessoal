@@ -1,0 +1,127 @@
+html,
+body {
+  height: 100vh;
+}
+/*-------------------- navHead ----------------------*/
+
+body{margin:0;
+    font-family: Roboto, Arial, sans-serif;
+    background-image: url("../img/AdobeStock_259562543.jpeg");
+    /* inserir a possibilidade de pegar da internet caso n encontre no pc */
+}
+
+.items{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background: #444;
+}
+
+.items li {
+    float: left;
+
+}
+
+
+/* obs: tentar fazer a classe flutuar n funcionar, ancora n flutua */
+.items li:last-child{
+    float: right;
+    margin-right: 4vw;
+}
+
+
+li a{
+    display: block;
+    color: rgba(243, 243, 243, 0.829);
+    text-decoration: none;
+    
+    padding: 14px 16px;
+}
+
+
+li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+.active {
+    background-color: #519dee;
+  }
+
+  /* ----------------------main------------------------- */
+
+  section {
+    /* uma flexbox sempre precisa estar dentro de um
+    parente com o display flex */
+    display: flex;
+
+    flex-direction: column;
+    /* o justify content com o align items servem para juntos deixarem perfeitamente no centro */
+    justify-content: center;
+    /* deixa o conteudo apenas no meio, desestica */
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 2vh 0;
+    color: rgb(238, 229, 229);
+  }
+  
+  form {
+    margin: 2.3vh 0;
+    background-color: #333;
+    padding: 3vh 3vw;
+    border-radius: 1vh;
+
+  }
+  
+  form .input-block {
+    margin-bottom: 3vh;
+    margin-right: 1vh;
+    
+  }
+  
+  form .input-block label {
+    /* testar o melhor  */
+    font-size: 14px;
+    color:white;
+  }
+  
+  form .input-block input {
+    min-width: 18vw;
+    display: block;
+    margin-top: 0.9vh;
+    padding:  0.8vh;
+    font-size: 16px;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #519dee;
+    outline-color: #519dee;
+  }
+  
+  form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: #519dee;
+    color: white;
+    border-radius: 2.5vh;
+    margin: auto;
+    padding: 0.8vh;
+  }
+
+  form{
+    overflow: hidden;
+  }
+
+  .lostPass a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* deixa o conteudo apenas no meio, desestica */
+    align-items: center;
+    color: white;
+    text-decoration: none ;
+  }

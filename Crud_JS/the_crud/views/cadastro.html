@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- 
+criar validaçao para o número do logradouro, não permitindo que seja negativo
+
+criar validaçao para a data do ano
+
+criar validador para senha
+
+utilzar o campo do input block para criar uma classe em caso de ao menos um campo vazio para reduzir codigo
+
+ajeitar o complemento
+
+efetuar as mudanças devidas no css.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styleCadastro.css">
+    <script src="../js/main.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="listaHeader">
+            <li>
+                <a class="active" href="#">
+                    Cadastro
+                </a>
+            </li>
+            <li>
+                <a class="left" href="../index.html">
+                    Voltar para o Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+
+        <header>
+            <h1>
+                Cadastro de cliente
+            </h1>
+        </header>
+
+        <div class="form-wrapper">
+            <form action="">
+
+
+                <div class="input-block">
+                    <label for="nome">Nome:</label>
+                    <input type="text" onkeyup="maiuscula(this);" name="nome" id="nome" required
+                        pattern="[a-zA-Záãâéêíîóôõú\s]+$" title="Preencha esse campo apenas com letras">
+                </div>
+
+                <div class="input-block">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" onkeyup="maiuscula(this);" name="sobrenome" id="sobrenome" required
+                        pattern="[a-zA-Záãâéêíîóôõú\s]+$" title="Preencha esse campo apenas com letras">
+                </div class="input-block">
+
+
+                <div class="input-block">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" required minlength="14" maxlength="14"
+                        title="Preencha esse campo apenas com 11 números.">
+                </div>
+
+                <div class="input-block">
+                    <label for="dob">Nascimento:</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+
+                <div class="input-block">
+                    <div id="sex-choice">
+                        <label for="sex-choice">Sexo:</label>
+                        <input type="radio" name="sex" id="fem" value="F" required title="Feminino">
+                        <label for="fem">Feminino</label>
+                        <input type="radio" name="sex" id="masc" value="M" required title="Masculino">
+                        <label for="masc">Masculino</label>
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label for="emailCad">E-mail:</label>
+                    <input type="email" name="emailCad" id="emailCad" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                </div>
+
+                <div class="input-block">
+
+                    <label for="telefoneCad">Telefone:</label>
+                    <input type="tel" name="telefoneCad" id="telefoneCad" required minlength="14" maxlength="14"
+                        title="Parenteses e traços(separadores) serão inseridos automaticamente."
+                        placeholder="ex: 99 9999 9999">
+                </div>
+
+                <div class="input-block">
+                    <label for="celularCad">Celular:</label>
+                    <input type="tel" name="celularCad" id="celularCad" required minlength="15" maxlength="15"
+                        title="Parenteses e traços(separadores) serão inseridos automaticamente."
+                        placeholder="ex: 99 99999 9999">
+                </div>
+                <div class="input-block">
+                    <label for="cidadeCad">Cidade:</label>
+                    <select id="cidadeCad">
+                        <option value="rj">Rio de Janeiro</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="es">Espirito Santo</option>
+                        <option value="mg">Minas Gerais</option>
+                    </select>
+                </div>
+
+                <div class="input-block">
+                    <label for="bairroCad">Bairro:</label>
+                    <input type="text" name="bairroCad" id="bairroCad" required>
+                </div>
+
+                <div class="input-block">
+                    <label for="tipoLogCad">Tipo:</label>
+                    <select id="tipoLogCad">
+                        <option value="rua">Rua</option>
+                        <option value="casa">Casa</option>
+                        <option value="apto">Apartamento</option>
+                    </select>
+                </div>
+
+                <div class="input-block">
+                    <label for="logradouroCad">Logradouro:</label>
+                    <input type="text" name="logradouroCad" id="logradouroCad" placeholder="Logradouro" required>
+
+                    <input type="number" name="numLogCad" id="numLogCad" placeholder="Nº" required pattern="[0-9]+$"
+                        title="Preencha esse campo apenas com números, sem o uso de separador(traço).">
+
+                    <input type="text" name="compLogCad" id="compLogCad" placeholder="Complemento">
+                </div>
+
+                <div class="input-block">
+                    <label for="cepCad">Cep:</label>
+
+                    <input type="text" name="cepCad" id="cepCad" placeholder="8 numeros sem separador" maxlength="9"
+                        required title="Preencha esse campo apenas com números, sem o uso de separador(traço).">
+                </div>
+
+
+                <div class="input-block">
+                    <label for="password">Senha:</label>
+
+                    <input type="password" name="password" id="password" >
+                </div>
+
+
+
+                <div>
+                    <label for="subscribeNews">Newsletter?</label>
+                    <input type="checkbox" id="subscribeNews" name="subscribe" value="s" checked>
+                </div>
+                </section>
+                <button id="salvarBtn">Criar cadastro</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
